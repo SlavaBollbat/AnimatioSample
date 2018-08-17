@@ -73,10 +73,7 @@ class ViewController: UIViewController {
 
 
 
-extension ViewController : UITextFieldDelegate, Shakable {
-   
-    func shake() {}
-
+extension ViewController : UITextFieldDelegate{
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
