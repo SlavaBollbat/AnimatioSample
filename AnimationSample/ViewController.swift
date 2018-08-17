@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         parallax(toView: logoToAnimate, magnitude: -20)
     }
     
-    
     private func parallax(toView view: UIView, magnitude: Float) {
         
         let xMotion = UIInterpolatingMotionEffect(
@@ -67,8 +66,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
 }
 
 
@@ -91,4 +88,6 @@ extension ViewController : UITextFieldDelegate{
         textFieldWithShake.resignFirstResponder()
         return true
     }
+    
+   
 }

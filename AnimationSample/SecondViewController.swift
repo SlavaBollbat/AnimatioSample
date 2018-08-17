@@ -36,12 +36,9 @@ class SecondViewController: UIViewController {
         switch gester.direction {
         case .right:
 
-            
-            
-            UIView.animate(withDuration: 100, animations: {
-                
-               self.stackWidth.constant = self.view.bounds.size.width
-                
+            UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: {
+                self.stackWidth.constant = self.view.bounds.size.width
+                self.view.layoutIfNeeded()
             }, completion: nil)
             
         default:
@@ -51,7 +48,12 @@ class SecondViewController: UIViewController {
     
     
     @IBAction func resumePressed(_ sender: UIButton) {
-        self.stackWidth.constant = 0
+        
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
+            self.stackWidth.constant = 0
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
     }
     
 
